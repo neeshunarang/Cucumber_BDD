@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="17" time="0.937">
+    <testcase classname="DELETE Request for UserSkills API" name="DELETE user_skill_id with invalid authorization" time="0.12">
+        <system-out>
+            <![CDATA[Given Set DELETE method.....................................................passed
+When Sends DELETE request...................................................passed
+Then Status Code 401 unauthorized will be displayed.........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="DELETE Request for UserSkills API" name="DELETE non existing user_skill_id with valid authorization" time="0.013">
+        <system-out>
+            <![CDATA[Given Set DELETE method.....................................................passed
+When Sends DELETE request...................................................passed
+Then The response message should show "Failed to delete, Cant find the record".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="DELETE Request for UserSkills API" name="DELETE existing user_skill_id with valid authorization" time="0.007">
+        <system-out>
+            <![CDATA[Given Set DELETE method.....................................................passed
+When Sends DELETE request...................................................passed
+Then The Response message will be displayed "Successfully Deleted" with the status code 200 Ok.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Validate Get Request for single UserSkills API" name="GET request for single User skills with invalid authorization" time="0.004">
+        <system-out>
+            <![CDATA[Given Sets the Get method...................................................passed
+When Sends GET request......................................................passed
+Then Status code 401 unauthorized will be displayed.........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Validate Get Request for single UserSkills API" name="GET request for single User skills with invalid user_skill_id" time="0.006">
+        <system-out>
+            <![CDATA[Given Sets the Get method...................................................passed
+When Sends GET request......................................................passed
+Then The error message will be displayed as "No records found for this id" with the status code 400 bad request.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Validate Get Request for single UserSkills API" name="GET request for single User and skills with valid user_skill_id" time="0.014">
+        <system-out>
+            <![CDATA[Given Sets the Get method...................................................passed
+When Sends GET request......................................................passed
+Then The Json response user_skill_id, user_id, Skill_Id and months_of_exp will be displayed with status code 200 Ok..passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Validate Get Request for UsersSkills API" name="GET request for all Users and their skills with invalid authorization" time="0.005">
+        <system-out>
+            <![CDATA[Given Sets the Get method...................................................passed
+When Sends GET request......................................................passed
+Then Status Code 401 unauthorized will be displayed.........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Validate Get Request for UsersSkills API" name="GET request for all Users and their skills with valid authorization" time="0.004">
+        <system-out>
+            <![CDATA[Given Sets the Get method...................................................passed
+When Sends GET request......................................................passed
+Then Status code 200 ok will be displayed...................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Validate POST Request for UserSkills API" name="POST request with JSON request with invalid authorization" time="0.004">
+        <system-out>
+            <![CDATA[Given Sets the POST method..................................................passed
+When Send POST request with JSON request body by inputing user_id, Skill_id, months_of_exp.passed
+Then Status code 401 unauthorized will be displayed.........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Validate POST Request for UserSkills API" name="POST request for invalid JSON request and valid authorization" time="0.009">
+        <system-out>
+            <![CDATA[Given Sets the POST method..................................................passed
+When Send POST request with JSON request body by inputing user_id, Skill_id, months_of_exp.passed
+Then The error message will be displayed as "Failed to Create"..............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Validate POST Request for UserSkills API" name="POST request for valid JSON request and valid authorization" time="0.013">
+        <system-out>
+            <![CDATA[Given Sets the POST method..................................................passed
+When Send POST request with JSON request body by inputing user_id, Skill_id, months_of_exp.passed
+Then Response message will be displayed "Successfully Created" with the status code 201 created.passed
+And The JSON response contains auto generated user_skill_id, Creation time and last modified time will be set to current date and time..passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Validate PUT Request for UserSkills API" name="To Validate PUT request for JSON request with invalid authorization" time="0.012">
+        <system-out>
+            <![CDATA[Given Sets PUT method.......................................................passed
+When Sends PUT request for JSON request body with user_skill_id, user_id, Skill_id, months_of_exp.passed
+Then Status code 401 unauthorized will be displayed.........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Validate PUT Request for UserSkills API" name="To Validate PUT request for JSON request with nonexisting user_skill_id and valid authorization" time="0.004">
+        <system-out>
+            <![CDATA[Given Sets PUT method.......................................................passed
+When Sends PUT request for JSON request body with user_skill_id, user_id, Skill_id, months_of_exp.passed
+Then The error message will be displayed as "Failed to Update, cant retrieve the record".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Validate PUT Request for UserSkills API" name="To Validate PUT request for JSON request with existing user_skill_id and valid authorization" time="0.006">
+        <system-out>
+            <![CDATA[Given Sets PUT method.......................................................passed
+When Sends PUT request for JSON request body with user_skill_id, user_id, Skill_id, months_of_exp.passed
+Then Status code 200 ok will be displayed and last modified date will be updated.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Validate login credentials" name="Validate valid credentials" time="0.012">
+        <system-out>
+            <![CDATA[Given Enters Username: APIPROCESSING and Password: 2xx@Success..............passed
+When Clicks on Login........................................................passed
+Then Displays message valid authentication with status code 200 Ok..........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Validate login credentials" name="Validate invalid credentials" time="0.006">
+        <system-out>
+            <![CDATA[Given Enters Username: "User3451" and Password: "india@567".................passed
+When Clicks on Login........................................................passed
+Then Displays message invalid authentication with status code 400 Bad request.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Validate login credentials" name="Validate invalid credentials 2" time="0.005">
+        <system-out>
+            <![CDATA[Given Enters Username: "User7685" and Password: "abcdfe"....................passed
+When Clicks on Login........................................................passed
+Then Displays message invalid authentication with status code 400 Bad request.passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

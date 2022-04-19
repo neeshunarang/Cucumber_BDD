@@ -1,0 +1,16 @@
+StepsDefinition\DeleteUserSteps.class
+StepsDefinition\GetIdUsersSkillsSteps.class
+StepsDefinition\SkillPostStep.class
+StepsDefinition\SkillPutStep.class
+StepsDefinition\PostUserSteps.class
+StepsDefinition\PutUserSteps.class
+StepsDefinition\DELETEUserSkillsSteps.class
+StepsDefinition\SkillsGetStep.class
+StepsDefinition\POSTUsersSkillsSteps.class
+StepsDefinition\TestRunner.class
+StepsDefinition\GetUsersSkillsSteps.class
+StepsDefinition\UserAuthSteps.class
+StepsDefinition\PUTUserSkillsSteps.class
+StepsDefinition\SkillDeleteStep.class
+StepsDefinition\loginAuth.class
+StepsDefinition\GetUserSteps.class
